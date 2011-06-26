@@ -159,8 +159,8 @@ class ec3_Admin
     <!-- Event-Calendar: Event Editor -->
     <table width="100%" cellspacing="2" cellpadding="5" class="editform">
      <thead><tr>
-      <th><?php _e('Start','ec3'); ?></th>
-      <th><?php _e('End','ec3'); ?></th>
+      <th><?php _e('Start (24-hour time)','ec3'); ?></th>
+      <th><?php _e('End (24-hour time)','ec3'); ?></th>
       <th style="text-align:center"><?php _e('All Day','ec3'); ?></th>
       <!-- th><?php _e('Repeat','ec3'); ?></th -->
       <th></th>
