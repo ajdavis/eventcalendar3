@@ -30,6 +30,7 @@ ec3.big_cal = {
         ec3.add_class(td,'ec3_'+posts[i].kind+'day');
 	var p=document.createElement('p');
 	ec3.add_class(p,'ec3_'+posts[i].kind);
+	ec3.add_class(p,posts[i].class());
 	div.appendChild(p);
         var a=document.createElement('a');
         a.href=posts[i].link();

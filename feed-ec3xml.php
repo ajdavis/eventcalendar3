@@ -135,8 +135,19 @@ class ec3_ec3xml extends ec3_BasicCalendar
     if(array_key_exists($id,$this->details))
       return;
 
+    $posttags = get_the_tags();
+    if ($posttags) {
+        $tagnames = array();
+        foreach ($posttags as $tag) {
+	    $tagnames[count($tagnames)] = $tag->name.'_tag';
+        }
+        $space_separated_tagnames = implode(" ", $tagnames);
+    } else {
+        $space_separated_tagnames = "";
+    }
+    
     $link=get_permalink(); 
-    $d = " <detail id='pid_$id' title='$title' link='$link'";
+    $d = " <detail id='pid_$id' class='".$space_separated_tagnames."' title='$title' link='$link'";
     $excerpt = get_the_excerpt();
     if(empty($excerpt))
       $d .= " />\n";

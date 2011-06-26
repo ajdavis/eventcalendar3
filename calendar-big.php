@@ -79,9 +79,21 @@ class ec3_BigCalendar extends ec3_SidebarCalendar
       else
         $title .= '...'.__('all day','ec3').'...';
     }
-
+    
+    $tagnames = array();
+    $posttags = the_tags();
+    if ($posttags) {
+	$space_separated_tagnames = implode(' ', $posttags);
+        foreach ($posttags as $tag) {
+	    $tagnames[count($tagnames)] = $tag->name.'_tag';
+        }
+        $space_separated_tagnames = implode(" ", $tagnames);
+    } else {
+        $space_separated_tagnames = "";
+    }
+    
     return "\n\t    "
-      . '<p class="ec3_event"><a title="'.$title
+      . '<p class="ec3_event '.$space_separated_tagnames.'"><a title="'.$title
       . '" href="'.get_permalink().'">'.get_the_title().'</a></p>';
   }
 

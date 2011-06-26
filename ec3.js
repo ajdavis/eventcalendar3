@@ -744,6 +744,7 @@ ec3.xml.Post.prototype = {
  
   link   : function(){ return this._detail().getAttribute('link'); },
   title  : function(){ return this._detail().getAttribute('title'); },
+  class  : function(){ return this._detail().getAttribute('class'); },
   excerpt: function()
     {
       var excerpts=this._detail().getElementsByTagName('excerpt');
