@@ -145,9 +145,11 @@
 
 table.ec3_schedule {
  border-collapse:collapse;
- margin:0.5ex 1ex 0.5ex 0;
+ margin:0.5ex 1ex 2ex 0;
  border:solid 2px #800;
- float:left;
+// float:left;
+// ajdavis overrode, 2010_01_24
+  float:none;
 }
 
 table.ec3_schedule td {
@@ -159,7 +161,8 @@ td.ec3_start { text-align:right; }
 
 td.ec3_to    { text-align:center; }
 
-.ec3_schedule .ec3_past *  { text-decoration:line-through }
+// ajdavis overrode, 2010_01_24
+//.ec3_schedule .ec3_past *  { text-decoration:line-through }
 
 /***
  ***  Iconlet
@@ -287,7 +290,7 @@ td .ec3_daynum {
 }
 
 td.ec3_postday  a.ec3_daynum { color:#0066cc }
-td.ec3_eventday a.ec3_daynum { color:#a00 }
+td.ec3_eventday a.ec3_daynum { color:#3C4BC7 }
              span.ec3_daynum { color:black }
 
 td.ec3_postday  a.ec3_daynum:hover { color:white; background-color:#0066cc }
@@ -308,11 +311,10 @@ td.ec3_eventday a.ec3_daynum:hover { color:white; background-color:#a00 }
 }
 
 #ec3_big_cal .ec3_event a {
- color:#a00;
+ color:#3C4BC7;
 }
 
 #ec3_big_cal .pad {
  border:none;
  background-color:#eee;
 }
-
