@@ -28,10 +28,10 @@ ec3.big_cal = {
       for(var i=0, len=posts.length; i<len; i++)
       {
         ec3.add_class(td,'ec3_'+posts[i].kind+'day');
-	var p=document.createElement('p');
-	ec3.add_class(p,'ec3_'+posts[i].kind);
-	ec3.add_class(p,posts[i].class());
-	div.appendChild(p);
+        var p=document.createElement('p');
+        ec3.add_class(p,'ec3_'+posts[i].kind);
+        ec3.add_class(p,posts[i].className());
+        div.appendChild(p);
         var a=document.createElement('a');
         a.href=posts[i].link();
         a.title=posts[i].brief();
