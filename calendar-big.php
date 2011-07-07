@@ -81,9 +81,8 @@ class ec3_BigCalendar extends ec3_SidebarCalendar
     }
     
     $tagnames = array();
-    $posttags = the_tags();
+    $posttags = get_the_tags();
     if ($posttags) {
-	$space_separated_tagnames = implode(' ', $posttags);
         foreach ($posttags as $tag) {
 	    $tagnames[count($tagnames)] = $tag->name.'_tag';
         }
